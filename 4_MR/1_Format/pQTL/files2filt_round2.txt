@@ -1,0 +1,11 @@
+../res_invn_X6366_38_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X17331_138_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X5457_5_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X3049_61_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X2948_58_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X8953_47_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X15556_49_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X6284_7_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X14037_18_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X16288_17_Fenland_MA_auto_chrX_filtered_1pc.txt.gz
+../res_invn_X17760_128_Fenland_MA_auto_chrX_filtered_1pc.txt.gz

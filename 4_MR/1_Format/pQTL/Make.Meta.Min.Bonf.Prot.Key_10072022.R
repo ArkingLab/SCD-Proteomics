@@ -1,0 +1,18 @@
+library(magrittr)
+library(readxl)
+
+alldata <- readRDS("../../9_other/combine.data/All.SCAxProteomics.Results_10072022.RDS")
+meta.min.bonf <- subset(alldata, cohort == "meta" & strat == "all" & P<(0.05/4955) & model == "M2")
+ferkingstad <- read_xlsx("aric.prot.real.archive/scd.assoc/7_MR/pQTL.databases/Ferkingstad.2021/Ferkingstad.2021_Supp.Table02.xlsx") %>% as.data.frame()
+key <- meta.min.bonf[, c("SeqId.use", "target_use", "ARIC.target", "ARIC.uniprot_id", "ARIC.uniprot.full.name", "ARIC.targetfullname", "ARIC.entrezgeneid", "ARIC.entrezgenesymbol")]
+ferkingstad$seqid <- gsub("_", "-", ferkingstad$seqid)
+key <- merge(key, ferkingstad[, c("seqid","chr_prot","strand_prot","tss_prot")] %>% unique(), by.x = "SeqId.use", by.y = "seqid", all.x = TRUE)
+#pietzner <- read_xlsx("aric.prot.real.archive/scd.assoc/7_MR/pQTL.databases/Pietzner.2021/Pietzner.Supp.T3.xlsx") %>% as.data.frame()
+#pietzner$SeqId.use <- gsub("SeqId_", "", pietzner$SomaScan.ID) %>% gsub("_", "-",.)
+#key <- merge(key, pietzner[, c("SeqId.use", "start", "end")], by = "SeqId.use", all.x = TRUE)
+missing <- subset(key, is.na(tss_prot))
+writexl::write_xlsx(missing, "Protins.with.Missing.Info.xlsx")
+filling <- read_xlsx("Protins.with.Missing.Info_Edited.xlsx") %>% as.data.frame()
+finalkey <- subset(key, !is.na(chr_prot))
+finalkey <- rbind(finalkey, filling)
+write.table(finalkey, file = "Meta.Min.Bonf.Prot.List.txt", row.names = F, col.names = T, sep = "\t", quote = F)
