@@ -1,4 +1,5 @@
 # SCD-Proteomics
+Scripts utilized in sudden cardiac death and proteomics association study in ARIC and CHS cohorts (manuscript in submission, citation to be updated).
 
 ## Directories
 
