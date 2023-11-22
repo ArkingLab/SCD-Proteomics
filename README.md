@@ -7,7 +7,7 @@ Scripts utilized in sudden cardiac death and proteomics association study in ARI
 
 **2_Association:** perform aptamer-SCD associations in ARIC
 
-**3_Meta:** run meta-analysis of ARIC and CHS results, combine all meta-analyses into a single .rds file for downstream analyses, generate files used for manuscript figure and table creation. _No stratified results were included in the manuscript (only combined meta-analysis using both races and sexes)
+**3_Meta:** run meta-analysis of ARIC and CHS results, combine all meta-analyses into a single .rds file for downstream analyses, generate files used for manuscript figure and table creation. _No stratified results were included in the manuscript (only combined meta-analysis using both races and sexes)._
 
 **4_MR:** format pQTL and SCD summary statistics then run MR
 
